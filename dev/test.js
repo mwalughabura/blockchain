@@ -8,7 +8,7 @@ const bitcoin = new Blockchain();
 // bitcoin.createNewBlock(3211, 'JDFGSAIU9WRN09F90G', 'KJKJNIRI4RT8IILKDRRO0');
 
 // Second test
-bitcoin.createNewBlock(2234, 'NKHOSDJF09KLNL', 'JKNSFDJROUNIOFD');
+/*bitcoin.createNewBlock(2234, 'NKHOSDJF09KLNL', 'JKNSFDJROUNIOFD');
 
 bitcoin.createNewTransaction(100, 'ALEXJSDLFJWROEW0', 'JENNJI98WRNI83');
 
@@ -23,4 +23,27 @@ bitcoin.createNewBlock(324, 'JKJNDF2NLDFS0', 'J9JDFGJDFGI49NRA');
 // Checking blocks
 console.log(bitcoin);
 // Checking transactions
-console.log(bitcoin.chain[2]);
+console.log(bitcoin.chain[2]);*/
+
+// Third test
+const previousBlockHash = 'DSFAJLKJU90EWRNOJEWROI';
+const currentBlockHash = [
+    {
+        amount: 10,
+        sender: 'OUJSDFJ3RNJ30IOJDFJNA',
+        recepient: 'FDSJKOWERU4908UR4OI0'
+    },
+    {
+        amount: 10,
+        sender: 'OUJSDFJ3RNJ30IOJDFJNA',
+        recepient: 'FDSJKOWERU4908UR4OI0'
+    },
+    {
+        amount: 10,
+        sender: 'OUJSDFJ3RNJ30IOJDFJNA',
+        recepient: 'FDSJKOWERU4908UR4O0'
+    }
+];
+const nonce = 100;
+
+console.log(bitcoin.hashBlock(previousBlockHash, currentBlockHash, nonce));
